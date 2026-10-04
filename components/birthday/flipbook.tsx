@@ -2,6 +2,7 @@
 
 import { motion, type PanInfo } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import confetti from 'canvas-confetti'
 import { useCallback, useEffect, useState, type MouseEvent, type ReactNode } from 'react'
 import { BOOK_PAGES } from '@/lib/gift-config'
 import {
@@ -14,7 +15,7 @@ import {
   TextPage,
 } from './book-pages'
 import { FloatingHearts } from './floating-hearts'
-import confetti from 'canvas-confetti'
+
 
 type Leaf = { front: ReactNode; back: ReactNode }
 
@@ -69,24 +70,17 @@ export function Flipbook({ onPageChange, onVideoPlay, onVideoResume }: {
   )
 
   useEffect(() => {
-    const timer = window.setTimeout(async () => {
+    const timer = window.setTimeout(() => {
       goTo(1)
       
-      // Panggil efek ledakan konfeti dari tengah buku
-      try {
-        const confetti = (await import('canvas-confetti')).default
-        
-        // Ledakan dari titik tengah buku (sumbu X: 0.5, sumbu Y: 0.5)
-        confetti({
-          particleCount: 80,
-          spread: 70,
-          origin: { x: 0.5, y: 0.5 },
-          colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
-          zIndex: 9999,
-        })
-      } catch (e) {
-        console.error("Confetti error:", e)
-      }
+      // Panggil fungsi konfeti di sini!
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { x: 0.5, y: 0.5 },
+        colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
+        zIndex: 9999,
+      })
 
     }, AUTO_OPEN_DELAY_MS)
 
