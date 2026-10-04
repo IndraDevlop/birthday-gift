@@ -333,7 +333,7 @@ export function BookEnd({
         )}
       </AnimatePresence>
 
-      <div className="flex h-full flex-col items-center justify-center gap-[2.5cqh] overflow-y-auto px-[10%] py-[8%] text-center">
+      <div className="flex h-full flex-col items-center justify-start gap-[2.5cqh] overflow-y-auto pt-[5%] px-[10%] text-center">
         {!isUnlocked ? (
           <>
             <h2 className="font-hand text-[clamp(1.3rem,11cqw,3.25rem)] font-bold leading-tight text-[#9d2a5f] text-balance">
