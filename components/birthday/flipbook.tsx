@@ -2,7 +2,6 @@
 
 import { motion, type PanInfo } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import confetti from 'canvas-confetti'
 import { useCallback, useEffect, useState, type MouseEvent, type ReactNode } from 'react'
 import { BOOK_PAGES } from '@/lib/gift-config'
 import {
@@ -15,7 +14,7 @@ import {
   TextPage,
 } from './book-pages'
 import { FloatingHearts } from './floating-hearts'
-
+import confetti from 'canvas-confetti'
 
 type Leaf = { front: ReactNode; back: ReactNode }
 
@@ -73,14 +72,18 @@ export function Flipbook({ onPageChange, onVideoPlay, onVideoResume }: {
     const timer = window.setTimeout(() => {
       goTo(1)
       
-      // Panggil fungsi konfeti di sini!
-      confetti({
-        particleCount: 80,
-        spread: 70,
-        origin: { x: 0.5, y: 0.5 },
-        colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
-        zIndex: 9999,
-      })
+      // Kasih jeda sedikit (200ms) biar pas banget waktu halaman mulai ngebuka
+      const confettiTimer = window.setTimeout(async () => {
+        confetti({
+          particleCount: 100,
+          spread: 90,
+          origin: { x: 0.5, y: 0.5 },
+          colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
+          zIndex: 99999, // Kita tingkatin lagi z-index-nya jadi 5 digit
+        })
+      }, 200)
+
+      return () => clearTimeout(confettiTimer)
 
     }, AUTO_OPEN_DELAY_MS)
 
