@@ -87,7 +87,7 @@ export function BirthdayPage() {
         <h2 className="font-hand text-[clamp(1.5rem,13cqw,4rem)] font-bold leading-tight text-[#9d2a5f] text-balance">
           {GIFT_CONFIG.book.coverTitle.replace('🎂', '').trim()}
         </h2>
-        <p className="font-hand text-[clamp(0.9rem,6cqw,1.6rem)] text-ink/70">Turn the page, my love</p>
+        <p className="font-hand text-[clamp(0.9rem,6cqw,1.6rem)] text-ink/70">Lanjut baca ya ➡️</p>
       </div>
     </PaperFace>
   )
