@@ -69,22 +69,40 @@ export function Flipbook({ onPageChange, onVideoPlay, onVideoResume }: {
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      // 1. Perintahkan buku buat buka halaman
       goTo(1)
       
-      // trigger deploy confetti
       const confettiDelay = window.setTimeout(() => {
-        confetti({
-          particleCount: 100,
-          spread: 90,
-          origin: { x: 0.5, y: 0.5 },
-          colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
-          zIndex: 99999,
-        })
+        // Panggil library canvas-confetti langsung via CDN browser secara aman
+        if (typeof window !== 'undefined') {
+          // Cek apakah script udah pernah ke-load, kalau belum load otomatis
+          if (!(window as any).confetti) {
+            const script = document.createElement('script')
+            script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js'
+            script.onload = () => {
+              if ((window as any).confetti) {
+                (window as any).confetti({
+                  particleCount: 100,
+                  spread: 90,
+                  origin: { x: 0.5, y: 0.5 },
+                  colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
+                  zIndex: 99999,
+                })
+              }
+            }
+            document.head.appendChild(script)
+          } else {
+            (window as any).confetti({
+              particleCount: 100,
+              spread: 90,
+                  origin: { x: 0.5, y: 0.5 },
+              colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
+              zIndex: 99999,
+            })
+          }
+        }
       }, 350)
 
       return () => window.clearTimeout(confettiDelay)
-
     }, AUTO_OPEN_DELAY_MS)
 
     return () => window.clearTimeout(timer)
