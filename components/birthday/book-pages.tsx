@@ -110,34 +110,42 @@ export function PhotoPage({ page, pageNumber }: { page: BookPage; pageNumber: nu
 
   return (
     <PaperFace side="left">
-      <div className="relative flex h-full items-center justify-center p-[10%]">
-        {/* Kita render SEMUA foto sekaligus, tapi ditumpuk (absolute) */}
-        {photos.map((photo, index) => (
+      
+      {/* TRIK MEMORY SEMENTARA (IDE LU BANGET!) */}
+      {/* Kita render semua foto di background dengan class "hidden" (display: none). 
+          Browser bakal nge-download fotonya ke memori (cache), tapi GPU HP lu 
+          gak bakal nge-render fisiknya, jadi DIJAMIN GAK CRASH! */}
+      <div className="hidden">
+        {photos.map((photo, i) => (
+          <Polaroid 
+            key={`preload-${i}`}
+            photo={photo} 
+            accent="tape" 
+            sizes="(min-width: 768px) 320px, 45vw"
+            priority={true} // Paksa Next.js nyimpen ke memori sejak awal
+          />
+        ))}
+      </div>
+
+      <div className="flex h-full items-center justify-center p-[10%]">
+        {/* DOM utama tetep bersih, cuma 1 foto yang hidup secara fisik */}
+        <AnimatePresence mode="wait">
           <motion.div
-            key={index} // Key pakai index biar elemennya statis (gak dibongkar pasang React)
-            className="absolute flex h-full w-full items-center justify-center"
-            initial={false}
-            animate={{
-              opacity: currentIndex === index ? 1 : 0, // Cuma yang aktif yang kelihatan
-              scale: currentIndex === index ? 1 : 0.95,
-              zIndex: currentIndex === index ? 10 : 1 // Foto aktif selalu di paling atas
-            }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            style={{ 
-              pointerEvents: currentIndex === index ? 'auto' : 'none' 
-            }}
+            key={currentIndex}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <Polaroid 
-              photo={photo} 
+              photo={photos[currentIndex]} 
               accent="tape" 
               className={`w-[min(78cqw,62cqh)] ${tilt}`} 
-              sizes="(min-width: 768px) 320px, 45vw" 
-              // WAJIB: Kasih priority true biar Next.js mematikan fitur lazy-load 
-              // dan langsung siapin gambarnya di background
-              priority={true} 
+              sizes="(min-width: 768px) 320px, 45vw"
+              priority={true}
             />
           </motion.div>
-        ))}
+        </AnimatePresence>
       </div>
     </PaperFace>
   )
