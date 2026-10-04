@@ -19,7 +19,7 @@ export type BookPage = {
 
 export const GIFT_CONFIG = {
   recipientName: 'Elsa',
-  senderName: 'Yours, always',
+  senderName: 'Yang selalu mendoakan dan merindukanmu dari jauh, Indra🤍',
 
   music: {
     src: '/audio/birthday-music-box.mp3',
@@ -49,8 +49,7 @@ export const GIFT_CONFIG = {
     coverSubtitle: 'A little book of us',
     endTitle: 'Happy Birthday, Sayangku',
     endMessage:
-      'Selamat bertambah umur! Meskipun sekarang kita masih harus nahan rindu karena jarak, doa aku selalu yang terbaik buat kamu. Semoga semua harapan, niat, dan target kamu tahun ini bisa segera terwujud. Makasih ya udah selalu nemenin dan jadi alasan senyumku tiap hari, walau kadang kita cuma bisa saling bagi momen lewat layar. Nggak sabar buat lebih banyak cerita bareng kamu, sampai jarak nggak lagi jadi pemisah kita.',
-    senderName: 'Yang selalu mendoakan dan merindukanmu dari jauh, Indra',
+      'Sekali lagi selamat bertambah umur! Meskipun sekarang kita masih harus nahan rindu karena jarak, doa aku selalu yang terbaik buat kamu. Semoga semua harapan, niat, dan target kamu tahun ini bisa segera terwujud. Makasih ya udah jadi bagian dari hidupku dan jadi alasan senyumku tiap hari, walau kadang kita cuma bisa saling bagi momen lewat layar. Nggak sabar buat lebih banyak cerita bareng kamu, sampai jarak nggak lagi jadi pemisah kita.',
   },
 }
 

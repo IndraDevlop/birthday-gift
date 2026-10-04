@@ -378,7 +378,7 @@ export function BookEnd({
               </div>
             </div>
             <span className="mt-1 text-[clamp(0.55rem,3cqw,0.75rem)] font-medium text-ink/60 animate-pulse">
-              Press & hold to unlock surprise ❤️️
+              satu lagi kejutan kecil buatmu, tekan ❤️️ yang lama ya...
             </span>
           </>
         ) : (
