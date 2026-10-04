@@ -119,7 +119,6 @@ export function Flipbook({ onPageChange, onVideoPlay, onVideoResume }: {
           x: { duration: FLIP_DURATION, ease: [0.645, 0.045, 0.355, 1] },
         }}
         onClick={onBookClick}
-        onPanEnd={onPanEnd}
         style={{ touchAction: 'pan-y' }}
       >
         <motion.div
