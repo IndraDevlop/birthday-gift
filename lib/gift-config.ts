@@ -72,7 +72,7 @@ export const BOOK_PAGES: BookPage[] = [
     title: 'Where it all began',
     date: 'May 31 — June 7',
     message:
-      'It all started with a simple effort to reconnect with you after so long. Siapa sangka, tanggal 6 Juni jadi hari pertama kita duduk bersama di Bedeng Hills. Kita masih sama-sama malu-malu, tapi suasana hangat itu mencair begitu saja. Dan tepat keesokan harinya, first video call kita bikin aku sadar—aku ingin terus mendengar suaramu setiap hari. That was truly the sweetest beginning of us.',
+      'It all started with a simple effort to reconnect with you after so long. Siapa sangka, tanggal 6 Juni jadi hari pertama kita duduk bersama di Bedeng Hills. Kita masih sama-sama malu-malu, tapi suasana hangat itu mencair begitu saja. Dan tepat keesokan harinya, first video call kita bikin aku sadar—aku ingin terus mendengar suaramu setiap hari. That was truly the sweetest beginning of us. ➡️',
   },
   {
     photo: [
@@ -85,7 +85,7 @@ export const BOOK_PAGES: BookPage[] = [
     title: 'The Day We Became Us',
     date: 'June 16 — June 30',
     message:
-      'Pertemuan ke 2 Days of exploring Bandung and Kiara Artha Park seharian kita jadi penjelajah di bandung, sampai ke Juni tanggal 28 kita bertemu kembali untuk melakukan banyak hal seperti makan di Gacoan, nonton movie, makan es krim bersama sampai satu per satu ceklist kamu terkabulkan. malamnya sepulang dari sana aku terus menyatakan perasaan sama kamu, and officially, you became mine 🥰. Dua hari kemudian aku di ajak berkunjung ke rumah kamu, aku punya sedikit trust issue tapi keraguan masa laluku langsung sirna saat keluarga kamu menyambut aku dengan begitu hangat. I knew right then, you are my safe place.',
+      'Pertemuan ke 2 Days of exploring Bandung and Kiara Artha Park seharian kita jadi penjelajah di bandung, sampai ke Juni tanggal 28 kita bertemu kembali untuk melakukan banyak hal seperti makan di Gacoan, nonton movie, makan es krim bersama sampai satu per satu ceklist kamu terkabulkan. malamnya sepulang dari sana aku terus menyatakan perasaan sama kamu, and officially, you became mine 🥰. Dua hari kemudian aku di ajak berkunjung ke rumah kamu, aku punya sedikit trust issue tapi keraguan masa laluku langsung sirna saat keluarga kamu menyambut aku dengan begitu hangat. I knew right then, you are my safe place. ➡️',
   },
   {
     photo: [
@@ -103,7 +103,7 @@ export const BOOK_PAGES: BookPage[] = [
     title: 'Lembang & August Memories',
     date: 'July 23 — August 25',
     message:
-      'Every trip with you always feels magical. Dari momen kamu yang sempat grogi pas aku jemput pulang kerja, jalan-jalan seru di Lembang Taman Dewata dan Braga, hingga bulan Agustus yang penuh cerita. Paling berkesan waktu ortuku ikut main ke Bandung dan kamu akhirnya ketemu langsung dengan mereka (walaupun aku sempat diledekin ortu sendiri!). Dilanjut petualangan kita ke Curug Cinulang, mampir ke cafe Senandung Sore, dan ngopi di mobil van pinggir bukit. With you, even a simple day turns into a core memory.',
+      'Every trip with you always feels magical. Dari momen kamu yang sempat grogi pas aku jemput pulang kerja, jalan-jalan seru di Lembang Taman Dewata dan Braga, hingga bulan Agustus yang penuh cerita. Paling berkesan waktu ortuku ikut main ke Bandung dan kamu akhirnya ketemu langsung dengan mereka (walaupun aku sempat diledekin ortu sendiri!). Dilanjut petualangan kita ke Curug Cinulang, mampir ke cafe Senandung Sore, dan ngopi di mobil van pinggir bukit. With you, even a simple day turns into a core memory. ➡️',
   },
   {
     photo: [
@@ -118,7 +118,7 @@ export const BOOK_PAGES: BookPage[] = [
     title: 'Garut Grilling & Rainy Nights',
     date: 'August 29 — September 26',
     message:
-      'Time spent with you brings absolute peace. Agenda berikutnya kita nge-grill bareng di Situ Salawé Garut, biarpun ada sedikit drama karpetnya sempat bolong kena panas panggangan, but it was hilarious and so cozy! Puncaknya waktu merayakan ulang tahunku di rumahmu, dan tanggal 26 kita datang ke malam perayaan anniversary Bandung di Summarecon Mall. walapun sempat hujan di sana, tapi kita masih bisa jajan makanan jadul sepuasnya, itu malam yang sangat indah walaupun kita jadi pulang larut malam, untung aku udah sogok roti bakar hehe..',
+      'Time spent with you brings absolute peace. Agenda berikutnya kita nge-grill bareng di Situ Salawé Garut, biarpun ada sedikit drama karpetnya sempat bolong kena panas panggangan, but it was hilarious and so cozy! Puncaknya waktu merayakan ulang tahunku di rumahmu, dan tanggal 26 kita datang ke malam perayaan anniversary Bandung di Summarecon Mall. walapun sempat hujan di sana, tapi kita masih bisa jajan makanan jadul sepuasnya, itu malam yang sangat indah walaupun kita jadi pulang larut malam, untung aku udah sogok roti bakar hehe.. ➡️',
   },
   {
     photo: [
