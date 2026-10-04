@@ -72,7 +72,7 @@ export function Flipbook({ onPageChange, onVideoPlay, onVideoResume }: {
       // 1. Perintahkan buku buat buka halaman
       goTo(1)
       
-      // 2. Beri jeda kecil (misal 300 milidetik) setelah buku mulai ngebuka, baru ledakkan konfeti
+      // trigger deploy confetti
       const confettiDelay = window.setTimeout(() => {
         confetti({
           particleCount: 100,
