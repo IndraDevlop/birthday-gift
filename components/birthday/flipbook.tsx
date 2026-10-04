@@ -15,7 +15,6 @@ import {
 } from './book-pages'
 import { FloatingHearts } from './floating-hearts'
 import confetti from 'canvas-confetti'
-
 type Leaf = { front: ReactNode; back: ReactNode }
 
 const LEAVES: Leaf[] = [
@@ -70,20 +69,21 @@ export function Flipbook({ onPageChange, onVideoPlay, onVideoResume }: {
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
+      // 1. Perintahkan buku buat buka halaman
       goTo(1)
       
-      // Kasih jeda sedikit (200ms) biar pas banget waktu halaman mulai ngebuka
-      const confettiTimer = window.setTimeout(async () => {
+      // 2. Beri jeda kecil (misal 300 milidetik) setelah buku mulai ngebuka, baru ledakkan konfeti
+      const confettiDelay = window.setTimeout(() => {
         confetti({
           particleCount: 100,
           spread: 90,
           origin: { x: 0.5, y: 0.5 },
           colors: ['#ff70a6', '#ff9770', '#ffd670', '#e7c6ff', '#8ecae6'],
-          zIndex: 99999, // Kita tingkatin lagi z-index-nya jadi 5 digit
+          zIndex: 99999,
         })
-      }, 200)
+      }, 350)
 
-      return () => clearTimeout(confettiTimer)
+      return () => window.clearTimeout(confettiDelay)
 
     }, AUTO_OPEN_DELAY_MS)
 
